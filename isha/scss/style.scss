@@ -1,0 +1,28 @@
+$heartsize: 100px;
+
+body {
+    background-color: #E5E5E5;
+}
+
+@keyframes heartbeat {
+    0%     { transform: scale(.75, .75); }
+	16%    { transform: scale(1, 1); }
+    33%    { transform: scale(.75, .75); }
+    49%    { transform: scale(1, 1); }
+	100%   { transform: scale(.75, .75); }
+}
+
+.heartbeat {
+    position: absolute;
+    width: $heartsize;
+    height: $heartsize;
+    animation: heartbeat .8s infinite;
+    left: 50%;
+    top: 50%;
+    margin: (-$heartsize/2) 0px 0px (-$heartsize/2);
+    text-align: center;
+    line-height: $heartsize;
+    font-size: $heartsize;
+    color: #AF394B;
+    cursor: default;
+}
